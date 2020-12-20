@@ -1,7 +1,7 @@
-<div id="login-background" class="bg-full m-0"></div>
+<div id="login-background" class="vh-100 vw-100 bg-image m-0">
 <div class="container-fluid">
-    <section class="row minh-100 align-items-center  justify-content-center">
-        <article class="col side text-center">
+    <section class="row vh-100 align-items-center  justify-content-center">
+        <article class="col d-none d-sm-none d-md-block text-center">
             <img src="../../../assets/comunity.png" alt="" srcset="" class="align-self-center m-auto">
         </article>
         <article class="col vertical-middle p-4">
@@ -14,18 +14,19 @@
                     <form>
                         <div class="icon-input mb-2">
                             <input type="text" name="user" class="form-control form-control-lg" id="user" placeholder="Usuario o email">
-                            <i class="fa fa-user"></i>
+                            <i class="icon-item fas fa-user-alt fa-lg"></i>
                         </div>
                         <div class="icon-input mb-2">
                             <input type="password" name="password" class="form-control form-control-lg" id="password" placeholder="Contraseña">
-                            <i class="fa fa-lock"></i>
+                            <i class="icon-item fas fa-lock fa-lg"></i> 
                         </div>
                         <button class="btn btn-primary text-uppercase mb-2 mx-auto" type="submit">Login</button>
                     </form>
                     
                 </div>
-                <div class="card-footer"><p class="help-text text-secondary text-center">¿Aún no tienes usuario? <a routerLink="/register" class="card-link">¡registrate aquí!</a></p></div>
+                <div class="card-footer"><p class="text-secondary text-center">¿Aún no tienes usuario? <a routerLink="/register" class="card-link">¡registrate aquí!</a></p></div>
             </div>
         </article>
     </section>
+</div>
 </div>
