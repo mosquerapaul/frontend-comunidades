@@ -8,32 +8,15 @@
 #login-background {
     background: url('../../../assets/login-background-1080.jpg') center top fixed no-repeat;
     filter: saturate(1.5) opacity(0.7);
+    background-size: cover;
 }
 
-.vertical-middle {
-    position: relative;
-    align-items:center;
-    top: 50vh;
-    transform: translateY(-50%);
+.minh-100 {
+    min-height: 100vh;
 }
 
 .login-container{
     max-width: 400px;
-    margin: auto;
-    p {
-        font-size: 1.3em;
-        letter-spacing: 1px;
-    }
-    .separator {
-        height: 4px;
-        width: 30%;
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%,  rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    }
-    button {
-        display: block;
-        font-size: 1.3em;
-        text-transform: uppercase;
-    }
     .help-text {
         font-size: 0.9em;
     }
@@ -45,7 +28,7 @@
     justify-content: center;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 800px) {
     .side {
         display: none;
     }
