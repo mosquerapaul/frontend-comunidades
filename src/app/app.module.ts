@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SingupComponent } from './pages/singup/singup.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SingupComponent } from './pages/singup/singup.component';
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    SingupComponent
+    SingupComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
