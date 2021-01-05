@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   navList= ['home', 'dashboard', 'login', 'singup'];
+  isMenuCollapsed: boolean = true;
 
   constructor() { }
 

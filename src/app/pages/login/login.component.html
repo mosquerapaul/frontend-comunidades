@@ -13,18 +13,21 @@
                 <div class="form-container card-body text-center m-auto">
                     <form>
                         <div class="icon-input mb-2">
-                            <input [(ngModel)]="loginUserData.email" type="text" name="email" class="form-control form-control-lg" placeholder="Usuario o email">
+                            <input [(ngModel)]="loginUserData.email" type="text" name="email"
+                              class="form-control form-control-lg" placeholder="Usuario o email">
                             <i class="icon-item fas fa-user-alt fa-lg"></i>
                         </div>
                         <div class="icon-input mb-2">
-                            <input [(ngModel)]="loginUserData.password" type="password" name="password" class="form-control form-control-lg" placeholder="Contraseña">
+                            <input [(ngModel)]="loginUserData.password" type="password" name="password"
+                              class="form-control form-control-lg" placeholder="Contraseña">
                             <i class="icon-item fas fa-lock fa-lg"></i>
                         </div>
                         <button class="btn btn-primary text-uppercase mb-2 mx-auto" (click)="loginUser()">Login</button>
                     </form>
 
                 </div>
-                <div class="card-footer"><p class="text-secondary text-center">¿Aún no tienes usuario? <a routerLink="/register" class="card-link">¡registrate aquí!</a></p></div>
+                <div class="card-footer"><p class="text-secondary text-center">¿Aún no tienes usuario?
+                  <a routerLink="/login" class="card-link">¡registrate aquí!</a></p></div>
             </div>
         </article>
     </section>
