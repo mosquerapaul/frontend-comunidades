@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  navList= ['home', 'dashboard', 'login', 'singup'];
+
   constructor() { }
 
   ngOnInit(): void {
