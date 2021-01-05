@@ -1,7 +1,14 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
-  <div class="collapse navbar-collapse">
+  <a class="navbar-brand" href="#"><img src="/assets/logo-comunidades-azul-sm.png" alt="Logo Comunidades"> <span class="text-primary font-weight-bold ml-2">Comunidades</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse-menu" aria-controls="collapse-menu"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="collapse-menu">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
       <li class="nav-item" *ngFor="let menu of navList"><a class="nav-link" href="/{{menu}}">{{menu | titlecase}}</a></li>
     </ul>
   </div>
+
 </nav>
