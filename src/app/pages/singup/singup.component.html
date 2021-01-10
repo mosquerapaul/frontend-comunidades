@@ -1,1 +1,41 @@
-<p>singup works!</p>
+<div id="singup-background" class="h-100 vw-100 bg-image m-0">
+  <div class="container-fluid h-100">
+      <section class="row h-100 align-items-center  justify-content-center">
+          <article class="col d-none d-sm-none d-md-block text-center">
+              <img src="/assets/comunity.png" alt="" srcset="" class="align-self-center m-auto">
+          </article>
+          <article class="col vertical-middle p-4">
+              <div class="login-container card  m-auto">
+                  <div class="card-header">
+                      <h2 class="text-uppercase text-center display-5 mb-3">Bienvenido</h2>
+                      <p class="wellcome text-uppercase text-center   ">Regístrate para acceder</p>
+                  </div>
+                  <div class="form-container card-body text-center m-auto">
+                      <form>
+                        <div class="icon-input mb-2">
+                            <input [(ngModel)]="singupUserData.name" type="text" name="name" class="form-control form-control-lg"
+                             placeholder="Nombre">
+                            <i class="icon-item fas fa-user-alt fa-lg"></i>
+                        </div>
+                          <div class="icon-input mb-2">
+                              <input [(ngModel)]="singupUserData.email" type="text" name="email" class="form-control form-control-lg"
+                               placeholder="Email">
+                              <i class="icon-item fas fa-user-alt fa-lg"></i>
+                          </div>
+                          <div class="icon-input mb-2">
+                              <input [(ngModel)]="singupUserData.password" type="password" name="password" class="form-control form-control-lg"
+                               placeholder="Contraseña">
+                              <i class="icon-item fas fa-lock fa-lg"></i>
+                          </div>
+                          <button class="btn btn-primary text-uppercase mb-2 mx-auto" (click)="singupUser()">SingUp</button>
+                      </form>
+
+                  </div>
+                  <div class="card-footer"><p class="text-secondary text-center">¿Ya estás registrado?
+                     <a routerLink="/login" class="card-link">¡accede aquí!</a></p></div>
+              </div>
+          </article>
+      </section>
+  </div>
+  </div>
+

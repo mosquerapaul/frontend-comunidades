@@ -11,8 +11,8 @@ import { User } from '@core/models/user';
 })
 export class AuthService {
 
-  private _registerUrl = 'https://comunities.herokuapp.com/v1/api/auth/singup';
-  private _loginUrl = 'https://comunities.herokuapp.com/v1/api/auth/singin';
+  private _registerUrl =  'https://comunities.herokuapp.com/v1/api/auth/singup';
+  private _loginUrl =     'https://comunities.herokuapp.com/v1/api/auth/singin';
 
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
