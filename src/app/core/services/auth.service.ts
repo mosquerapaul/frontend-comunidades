@@ -33,7 +33,7 @@ export class AuthService {
   loginUser(user: any) {
     return this.http.post<any>(this._loginUrl, user)
       .pipe(map(res => {
-        // localStorage.setItem token
+        localStorage.setItem('token', JSON.stringify(res.token));
         localStorage.setItem('currentUser', JSON.stringify(res.user));
         this.currentUserSubject.next(res.user);
         return res;
@@ -42,8 +42,16 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('currentUser');
-    // localStorage.removeItem -> token
+    localStorage.removeItem('token');
     this.currentUserSubject.next(new User());
+  }
+
+  getToken() {
+    return localStorage.getItem('token');
+  }
+
+  isAutenticated() {
+    return !!this.getToken();
   }
 
 
