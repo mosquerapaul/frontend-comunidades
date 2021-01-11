@@ -1,17 +1,31 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
-  <a class="navbar-brand" href="/">
+  <a class="navbar-brand" routerLink="/">
     <img src="/assets/logo-comunidades-azul-sm.png" alt="Logo Comunidades">
     <span class="text-primary font-weight-bold ml-2">Comunidades</span>
   </a>
+
   <button class="navbar-toggler" type="button" aria-controls="collapse-menu"
     aria-label="Toggle navigation" (click)="isMenuCollapsed = !isMenuCollapsed">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse show" [ngbCollapse]= "isMenuCollapsed">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-      <li class="nav-item" *ngFor="let menu of navList"><a class="nav-link" href="/{{menu}}">{{menu | titlecase}}</a></li>
+      <li class="nav-item" *ngFor="let navItem of navList">
+        <a class="nav-link" routerLinkActive="active" routerLink={{navItem}}>{{navItem | titlecase}}</a>
+      </li>
     </ul>
+  </div>
+
+  <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>User</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu-right">
+      <button ngbDropdownItem>
+        My Account
+      </button>
+      <button ngbDropdownItem (click)="logOut()">
+        Log Out
+      </button>
+    </div>
   </div>
 
 </nav>
