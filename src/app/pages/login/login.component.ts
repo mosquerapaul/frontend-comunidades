@@ -14,6 +14,12 @@ export class LoginComponent implements OnInit {
     password: ''
   }
 
+  formSend: boolean = false;
+  message = {
+    text: '',
+    status: ''
+  };
+
   constructor(
     private _auth: AuthService,
     private _router: Router
@@ -22,14 +28,20 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  formSendToggle() { this.formSend = !this.formSend }
+
   loginUser() {
     this._auth.loginUser(this.loginUserData)
       .subscribe((res: any) => {
         console.log(res);
         this._router.navigate(['/dashboard']);
       },
-      (error: any) => console.log(error)
-      );
+      (err: any) => {
+        console.log(err);
+        this.formSend = true;
+        this.message.text = err.error.message ? err.error.message : 'Se ha producido un error. Inténtalo de nuevo más tarde.';
+        this.message.status = 'danger';
+      });
 
   }
 

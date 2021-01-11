@@ -10,29 +10,30 @@
                       <h2 class="text-uppercase text-center display-5 mb-3">Bienvenido</h2>
                       <p class="wellcome text-uppercase text-center   ">Regístrate para acceder</p>
                   </div>
-                  <div class="form-container card-body text-center m-auto">
-                      <form>
+                  <div class="form-container card-body text-center m-0">
+                    <form>
+                      <div class="icon-input mb-2">
+                          <input [(ngModel)]="singupUserData.name" type="text" name="name" class="form-control form-control-lg"
+                            placeholder="Nombre">
+                          <i class="icon-item fas fa-user-alt fa-lg"></i>
+                      </div>
                         <div class="icon-input mb-2">
-                            <input [(ngModel)]="singupUserData.name" type="text" name="name" class="form-control form-control-lg"
-                             placeholder="Nombre">
+                            <input [(ngModel)]="singupUserData.email" type="text" name="email" class="form-control form-control-lg"
+                              placeholder="Email">
                             <i class="icon-item fas fa-user-alt fa-lg"></i>
                         </div>
-                          <div class="icon-input mb-2">
-                              <input [(ngModel)]="singupUserData.email" type="text" name="email" class="form-control form-control-lg"
-                               placeholder="Email">
-                              <i class="icon-item fas fa-user-alt fa-lg"></i>
-                          </div>
-                          <div class="icon-input mb-2">
-                              <input [(ngModel)]="singupUserData.password" type="password" name="password" class="form-control form-control-lg"
-                               placeholder="Contraseña">
-                              <i class="icon-item fas fa-lock fa-lg"></i>
-                          </div>
-                          <button class="btn btn-primary text-uppercase mb-2 mx-auto" (click)="singupUser()">SingUp</button>
-                      </form>
-
+                        <div class="icon-input mb-2">
+                            <input [(ngModel)]="singupUserData.password" type="password" name="password" class="form-control form-control-lg"
+                              placeholder="Contraseña">
+                            <i class="icon-item fas fa-lock fa-lg"></i>
+                        </div>
+                        <div *ngIf="formSend"><ngb-alert [type]="message.status" (closed)="formSendToggle()">{{message.text}}</ngb-alert></div>
+                        <button class="btn btn-primary text-uppercase mb-2 mx-auto" (click)="singupUser()">SingUp</button>
+                    </form>
                   </div>
                   <div class="card-footer"><p class="text-secondary text-center">¿Ya estás registrado?
-                     <a routerLink="/login" class="card-link">¡accede aquí!</a></p></div>
+                     <a routerLink="/login" class="card-link">¡accede aquí!</a></p>
+                  </div>
               </div>
           </article>
       </section>

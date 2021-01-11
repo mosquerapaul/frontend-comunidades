@@ -22,9 +22,10 @@
                               class="form-control form-control-lg" placeholder="Contraseña">
                             <i class="icon-item fas fa-lock fa-lg"></i>
                         </div>
+                        <div *ngIf="formSend"><ngb-alert [type]="message.status" (closed)="formSendToggle()">{{message.text}}</ngb-alert></div>
                         <button class="btn btn-primary text-uppercase mb-2 mx-auto" (click)="loginUser()">Login</button>
-                    </form>
 
+                    </form>
                 </div>
                 <div class="card-footer"><p class="text-secondary text-center">¿Aún no tienes usuario?
                   <a routerLink="/login" class="card-link">¡registrate aquí!</a></p></div>
