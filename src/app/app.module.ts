@@ -13,7 +13,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { SingupComponent } from './pages/singup/singup.component';
+import { SignupComponent } from './pages/signup/signup.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 @NgModule({
@@ -23,7 +23,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    SingupComponent,
+    SignupComponent,
     NotfoundComponent
   ],
   imports: [

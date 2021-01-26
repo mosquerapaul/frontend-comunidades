@@ -3,11 +3,11 @@ import { AuthService } from '@core/services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-singup',
-  templateUrl: './singup.component.html',
-  styleUrls: ['./singup.component.scss']
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.scss']
 })
-export class SingupComponent implements OnInit {
+export class SignupComponent implements OnInit {
 
   singupUserData = {
     email: '',
