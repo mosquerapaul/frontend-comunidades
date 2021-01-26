@@ -17,14 +17,17 @@
   </div>
 
   <div ngbDropdown class="d-inline-block">
-    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{userName()}}</button>
-    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu-right">
-      <button ngbDropdownItem>
-        My Account
-      </button>
-      <button ngbDropdownItem (click)="logOut()">
-        Log Out
-      </button>
+    <button class="btn btn-outline-primary" id="userMenu" ngbDropdownToggle>{{userName()}}</button>
+    <div ngbDropdownMenu aria-labelledby="userMenu" class="dropdown-menu-right">
+      <div *ngIf="isAutenticated(); then logedBlock else unLogedBlock"></div>
+      <ng-template #logedBlock>
+        <a ngbDropdownItem [routerLink]="['/useraccount/',  userId()]">My Account</a>
+        <a ngbDropdownItem (click)="logOut()">Log Out</a>
+      </ng-template>
+      <ng-template #unLogedBlock>
+        <a ngbDropdownItem routerLink="/login">LogIn</a>
+        <a ngbDropdownItem routerLink="/signup">SignUp</a>
+      </ng-template>
     </div>
   </div>
 
