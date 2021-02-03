@@ -32,8 +32,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 /*         Rutas estáticas
 ****************************************/
-app.use(['/dist/frontend-comunidades', '/'], express.static('public'));
-app.use('*', (req, res) => res.redirect('/'));
+app.use('/', express.static('dist/frontend-comunidades'));
 
 console.log(`Server started at port ${port} look at url: http://localhost:${port}`);
 app.listen(port);

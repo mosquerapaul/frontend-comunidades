@@ -22,7 +22,7 @@
       <div *ngIf="isAutenticated(); then logedBlock else unLogedBlock"></div>
       <ng-template #logedBlock>
         <a ngbDropdownItem [routerLink]="['/useraccount/',  userId()]">My Account</a>
-        <a ngbDropdownItem (click)="logOut()">Log Out</a>
+        <a ngbDropdownItem [routerLink]="['']" (click)="logOut()">Log Out</a>
       </ng-template>
       <ng-template #unLogedBlock>
         <a ngbDropdownItem routerLink="/login">LogIn</a>
