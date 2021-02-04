@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 /*         Rutas estáticas
 ****************************************/
-app.use(['/public', '/'], express.static('public'));
+app.use(['/'], express.static('../public'));
 app.use('*', (req, res) => res.redirect('/'));
 
 console.log(`Server started at port ${port} look at url: http://localhost:${port}`);
