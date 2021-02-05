@@ -4,24 +4,28 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` into angular-source folder. Navigate to `http://localhost:4200/`. 
+The app will automatically reload if you change any of the angular source files. 
 
-## Code scaffolding
+## Angular
+Angular code is inside angular-source folder. You have to go inside it to run any of following comands:
+### Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `/public` directory. Use the `--prod` flag for a production build.
+Go back to main folder an run `npm test` to start nodemon or `npm start` to run the express server. Navigate to `http://localhost:3000/` to test the app.
 
-## Running unit tests
+### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+### Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
