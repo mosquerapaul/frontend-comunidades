@@ -1,14 +1,13 @@
 /******************************************************************
  *                          EXPRESS ROUTER
- * Router realizado con Express
- * Se encargará principalmente de devolver los archivos de audio
- * solicitados desde el reproductor.
+ * It serves static files from public folder
 ******************************************************************/
 
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const normalizePort = require('normalize-port');
+const path = require('path');
 
 const port = normalizePort(process.env.PORT || '3000');
 
@@ -18,22 +17,11 @@ const port = normalizePort(process.env.PORT || '3000');
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-/*          Definiciones
-***************************************/
 
-
-/*         Import de Controladores
+/*         Static Routes
 ****************************************/
-
-
-/*         Resolución de rutas
-****************************************/
-
-
-/*         Rutas estáticas
-****************************************/
-app.use(['/'], express.static('../public'));
-app.use('*', (req, res) => res.redirect('/'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.all("*", (req, res) => { res.sendFile(path.resolve("public/index.html")); })
 
 console.log(`Server started at port ${port} look at url: http://localhost:${port}`);
 app.listen(port);
